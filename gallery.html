@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ian Gallery</title>
+  <style>
+    body {
+      margin: 20px;
+      font-family: Arial, 'Segoe UI', sans-serif;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 40px;
+      background-color: #000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a.active {
+      padding: 10px 25px;
+      border: 2px solid #ff6e6e;
+      font-size: 20px;
+      color: darkred;
+      border-radius: 25px;
+    }
+
+    .search-container {
+      margin-bottom: 15px;
+    }
+
+    #search {
+      padding: 8px;
+      width: 250px;
+      font-size: 14px;
+      border-radius: 5px;
+      border: 2px solid #ff6e6e;
+      text-align: center;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+      padding: 20px;
+      justify-content: center;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      color: black;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    .modal button {
+      background-color: #ff6e6e;
+      color: white;
+      border: none;
+      padding: 10px;
+      margin-top: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  
+    <nav>
+   <a href="#" class="active" style="margin-right: auto;">IAN</a>
+  <a href="index.html" class="active">Home</a>
+  <a href="gallery.html" class="active">Gallery</a>
+  <a href="about.html" class="active">About</a>
+  <a href="contact.html" class="active">Contact</a>
+</nav>
+
+
+  <div class="search-container">
+    <input type="text" id="search" placeholder="Digital art gallery" onkeyup="filterGallery()">
+  </div>
+
+  <div class="gallery">
+    <img src="pic1.jpg" alt="Abstract Art" onclick="showPopup('Abstract Art', '59')">
+    <img src="pic2.jpg" alt="Modern Canvas" onclick="showPopup('B-Modern Canvas', '59')">
+    <img src="pic3.jpg" alt="Surreal Design" onclick="showPopup('C-Surreal Design', '59')">
+    <img src="pic4.jpg" alt="Digital Dreamscape" onclick="showPopup('Digital Dreamscape', '39')">
+    <img src="pic5.jpg" alt="Digital Dreamscape" onclick="showPopup('E-Digital Dreamscape', '49')">
+    <img src="pic6.jpg" alt="Digital Dreamscape" onclick="showPopup('F-Digital Dreamscape', '28')">
+    <img src="pic7.jpg" alt="Digital Dreamscape" onclick="showPopup('G-Digital Dreamscape', '99')">
+    <img src="pic8.jpg" alt="Digital Dreamscape" onclick="showPopup('H-Digital Dreamscape', '20')">
+    <img src="pic9.jpg" alt="Digital Dreamscape" onclick="showPopup('I-Digital Dreamscape', '40')">
+    <img src="pci10.jpg" alt="Digital Dreamscape" onclick="showPopup('J-Digital Dreamscape', '45')">
+    <img src="pic11.jpg" alt="Digital Dreamscape" onclick="showPopup('K-Digital Dreamscape', '50')">
+    <img src="pic12.jpg" alt="Digital Dreamscape" onclick="showPopup('L-Digital Dreamscape', '65')">
+    <img src="pic13.jpg" alt="Digital Dreamscape" onclick="showPopup('M-Digital Dreamscape', '94')">
+    <img src="pic14.jpg" alt="Digital Dreamscape" onclick="showPopup('O-Digital Dreamscape', '34')">
+    <img src="pic15.jpg" alt="Digital Dreamscape" onclick="showPopup('P-Digital Dreamscape', '45')">
+    <img src="pic16.jpg" alt="Digital Dreamscape" onclick="showPopup('q-Digital Dreamscape', '99')">
+    <img src="pic17.jpg" alt="Digital Dreamscape" onclick="showPopup('R-Digital Dreamscape', '32')">
+    <img src="pic18.jpg" alt="Digital Dreamscape" onclick="showPopup('S-Digital Dreamscape', '54')">
+    <img src="pic19.jpg" alt="Digital Dreamscape" onclick="showPopup('T-Digital Dreamscape', '35')">
+    <img src="pic20.jpg" alt="Digital Dreamscape" onclick="showPopup('U-Digital Dreamscape', '35')"> 
+    <img src="pic21.jpg" alt="Digital Dreamscape" onclick="showPopup('V-Digital Dreamscape', '32')">
+    <img src="pic22.jpg" alt="Digital Dreamscape" onclick="showPopup('V-Digital Dreamscape', '32')">
+    <img src="pic23.jpg" alt="Digital Dreamscape" onclick="showPopup('V-Digital Dreamscape', '32')">
+    <img src="pic24.jpg" alt="Digital Dreamscape" onclick="showPopup('V-Digital Dreamscape', '32')">
+    <img src="pic25.jpg" alt="Digital Dreamscape" onclick="showPopup('V-Digital Dreamscape', '32')">
+    <img src="pic26.jpg" alt="Digital Dreamscape" onclick="showPopup('V-Digital Dreamscape', '32')">
+    <img src="pic27.jpg" alt="Digital Dreamscape" onclick="showPopup('V-Digital Dreamscape', '32')">
+    <img src="pic28.jpg" alt="Digital Dreamscape" onclick="showPopup('V-Digital Dreamscape', '32')">
+    <img src="pic29.jpg" alt="Digital Dreamscape" onclick="showPopup('V-Digital Dreamscape', '32')">
+    <img src="pic30.jpg" alt="Digital Dreamscape" onclick="showPopup('V-Digital Dreamscape', '32')">
+    <img src="pic32.jpg" alt="Digital Dreamscape" onclick="showPopup('V-Digital Dreamscape', '32')">
+    <img src="pic33.jpg" alt="Digital Dreamscape" onclick="showPopup('V-Digital Dreamscape', '32')">
+    <img src="pic34.jpg" alt="Digital Dreamscape" onclick="showPopup('V-Digital Dreamscape', '32')">
+    <img src="pic35.jpg" alt="Digital Dreamscape" onclick="showPopup('V-Digital Dreamscape', '32')">
+
+  <div class="modal" id="popup">
+    <h2 id="artTitle"></h2>
+    <p id="artPrice"></p>
+    <button onclick="checkout()"> Check Out</button>
+    <button onclick="closePopup()">Close</button>
+  </div>
+
+  <script>
+    function showPopup(title, price) {
+      document.getElementById("artTitle").innerText = title;
+      document.getElementById("artPrice").innerText = "Price: " + price;
+      document.getElementById("popup").style.display = "block";
+    }
+
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+
+    function checkout() {
+      alert("✅ Checkout Successfully!");
+      closePopup();
+    }
+
+    function filterGallery() {
+      let searchInput = document.getElementById("search").value.toLowerCase();
+      let images = document.querySelectorAll(".gallery img");
+
+      images.forEach(img => {
+        let altText = img.alt.toLowerCase();
+        img.style.display = altText.includes(searchInput) ? "block" : "none";
+      });
+    }
+  </script>
+
+</body>
+</html>

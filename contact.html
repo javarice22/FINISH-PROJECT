@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ian Gallery</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #000000;
+        color: #ffffff;
+        text-align: center;
+        margin: 0;
+    }
+    nav {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        padding: 20px;
+        background-color: #000;
+    }
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    nav a.active {
+        padding: 10px 25px;
+        border: 2px solid #ff6e6e;
+        font-size: 20px;
+        color: darkred;
+        border-radius: 25px;
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+
+    }
+    .plan {
+        background-color: #000000;
+        border-radius: 10px;
+        margin: 10px;
+        padding: 20px;
+        width: 300px;
+    }
+    .plan h2 {
+        font-size: 24px;
+    }
+    .plan .price {
+        font-size: 36px;
+        margin: 10px 0;
+    }
+    .plan .subscribe {
+        background-color: darkred;
+        color: #ffffff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .plan ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    .plan ul li {
+        margin: 10px 0;
+    }
+
+    .btn{
+      background-color: red;
+      color: #ffffff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: bold;
+
+    }
+
+
+  </style>
+</head>
+<body>
+
+ 
+  <nav>
+    <a href="#" class="active" style="margin-right: auto;">IAN</a>
+    <a href="index.html" class="active">Home</a>
+    <a href="gallery.html" class="active">Gallery</a>
+    <a href="about.html" class="active">About</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+
+  <h1>Account</h1>
+  <p>Choose the plan that's right for you</p>
+  <div class="container">
+      <div class="plan">
+          <h2>Starter plan</h2>
+          <p class="price">29php / month</p>
+          <p>Billed monthly</p>
+          <a href="login.html" class="btn btn-danger"> Subscribe</a>
+          <p>Save with annual billing (20% off)</p>
+          <ul>
+              <li>99 fast generations per month</li>
+              <li>No slow generations</li>
+              <li>2 concurrent fast jobs</li>
+              <li>Images are public</li>
+              <li>Personal commercial license</li>
+              <li>Custom aspect ratios</li>
+              <li>Image uploads</li>
+              <li>Optional credit top-ups</li>
+          </ul>
+      </div>
+      <div class="plan">
+          <h2>Pro plan</h2>
+          <p class="price">39php / month</p>
+          <p>Billed monthly</p>
+          <a href="login.html" class="btn btn-danger"> Subscribe</a>
+          <p>Save with annual billing (20% off)</p>
+          <ul>
+              <li>199fast generations per month</li>
+              <li>Unlimited slow generations with daily cap</li>
+              <li>3 concurrent fast jobs</li>
+              <li>Images are private</li>
+              <li>Full commercial license</li>
+              <li>Custom aspect ratios</li>
+              <li>Image uploads</li>
+              <li>Optional credit top-ups</li>
+          </ul>
+      </div>
+      <div class="plan">
+          <h2>Max plan</h2>
+          <p class="price">69php / month</p>
+          <p>Billed monthly</p>
+          <a href="login.html" class="btn btn-danger"> Subscribe</a>
+          <p>Save with annual billing (50% off)</p>
+          <ul>
+              <li>299 fast generations per month</li>
+              <li>Unlimited slow generations with daily cap</li>
+              <li>3 concurrent fast jobs</li>
+              <li>Images are private</li>
+              <li>Full commercial license</li>
+              <li>Custom aspect ratios</li>
+              <li>Image uploads</li>
+              <li>Optional credit top-ups</li>
+          </ul>
+      </div>  
+  </div>
+
+</body>
+</html>
